@@ -1,6 +1,6 @@
 {
   "name": "@ui/link",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "license": "MIT",
   "private": true,
   "main": "src/index.ts",
@@ -11,7 +11,7 @@
   "devDependencies": {
     "@emotion/core": "10.0.10",
     "@emotion/styled": "10.0.11",
-    "@ui/theme": "0.0.1",
+    "@ui/theme": "0.2.0",
     "jest-emotion": "10.0.11",
     "react": "16.8.6",
     "react-test-renderer": "16.8.6"
