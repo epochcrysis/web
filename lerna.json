@@ -3,7 +3,7 @@
   "packages": ["frontend/**/*", "scripts/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "version": "independent",
+  "version": "0.1.0",
   "command": {
     "version": {
       "allowBranch": "master",
