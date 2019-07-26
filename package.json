@@ -16,6 +16,7 @@
     "@aunited/beholder-formatter-jest": "^1.4.0",
     "@aunited/beholder-formatter-tsc": "^1.5.1",
     "@aunited/beholder-formatter-tslint": "^1.1.0",
+    "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "7.6.0",
     "@commitlint/config-lerna-scopes": "7.6.0",
     "babel-eslint": "10.0.1",
@@ -47,7 +48,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn lint && yarn test"
+      "pre-push": "yarn lint && yarn test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
