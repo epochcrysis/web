@@ -1,0 +1,14 @@
+{
+  "name": "@common/not-found-page",
+  "version": "0.0.5",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "16.8.6",
+    "react-intl": "2.9.0",
+    "react-redux": "7.0.3"
+  },
+  "devDependencies": {
+    "react-test-renderer": "16.8.6"
+  }
+}
