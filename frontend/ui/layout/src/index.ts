@@ -67,6 +67,7 @@ export interface LayoutProps {
   px?: string | number | string[] | number[]
   pt?: string | number | string[] | number[]
   pl?: string | number | string[] | number[]
+  pr?: string | number | string[] | number[]
 }
 
 export const Layout = styled.div<LayoutProps>(

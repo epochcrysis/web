@@ -18,6 +18,7 @@ export interface BoxProps {
   mb?: string | number | string[] | number[]
   alignItems?: string | string[]
   justifyContent?: string | string[]
+  backgroundColor?: string
 }
 
 export const Box = styled.div<BoxProps>(

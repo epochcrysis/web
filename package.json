@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "commit": "git-cz",
-    "format": "prettier --write '*.{js,yml,yaml,json,graphql}' '{frontend,scripts}/**/*.{js,ts,tsx,yml,yaml,json,graphql}'",
+    "format": "prettier --write '*.{js,yml,yaml,json,graphql}' '{frontend,scripts}/**/*.{js,ts,tsx,yml,yaml,json}'",
     "lint": "tslint --project tsconfig.json -c tslint.json -t codeFrame {frontend,scripts}/**/*.ts{,x}",
     "typecheck:watch": "tsc --watch --noEmit",
     "typecheck": "NODE_OPTIONS=--max_old_space_size=4096 tsc --noEmit",
