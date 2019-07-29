@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Layout, Box } from '@ui/layout'
+import { Box, Row, Layout } from '@ui/layout'
 import { TAIcon, ChevronUpIcon } from '@ui/icons'
 
 export const Footer = () => (

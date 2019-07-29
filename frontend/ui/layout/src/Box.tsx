@@ -4,10 +4,11 @@ import {
   minWidth,
   height,
   width,
-  backgroundColor,
   space,
+  display,
   alignItems,
   justifyContent,
+  backgroundColor,
 } from 'styled-system'
 
 export interface BoxProps {
@@ -19,12 +20,14 @@ export interface BoxProps {
   alignItems?: string | string[]
   justifyContent?: string | string[]
   backgroundColor?: string
+  display?: string | string[]
 }
 
 export const Box = styled.div<BoxProps>(
   {
     display: 'flex',
   },
+  display,
   backgroundColor,
   justifyContent,
   alignItems,
