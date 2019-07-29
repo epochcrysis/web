@@ -2363,6 +2363,18 @@
     execa "^1.0.0"
     npmlog "^4.1.2"
 
+"@monstrs/github-checks-formatter-commitlint@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@monstrs/github-checks-formatter-commitlint/-/github-checks-formatter-commitlint-1.1.4.tgz#a9febfece93d817719e34e16cbc30ddfffab6c88"
+  integrity sha512-KujQWBu3rvYniBQXBHsGbx+dRiyMn+/GLwsAMHwDZ2+xnXHkFoyE5X3sqI4A2m5+2+gONLDqwWnSexEwBZlL2g==
+  dependencies:
+    "@monstrs/github-checks-formatter-common" "1.1.4"
+
+"@monstrs/github-checks-formatter-common@1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@monstrs/github-checks-formatter-common/-/github-checks-formatter-common-1.1.4.tgz#1b9aad88691fabb6f88f969309eebcd736588a01"
+  integrity sha512-mywpZgp4pDUrtBalHPEntwEdoosI2gluch/eXhGrYpqzgnwGdcmqGyLAqyGuTzqAENZVCeQIMjxhFI9caF1qjw==
+
 "@monstrs/next-app-with-apollo@^0.1.1":
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-apollo/-/next-app-with-apollo-0.1.7.tgz#85aab925b4a5f5c270a0d13474d13202c1a4b8b4"
