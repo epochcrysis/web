@@ -1066,6 +1066,23 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@commitlint/cli@8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-8.1.0.tgz#a3d4236c0ac961d7026a53d728b179c696d6a045"
+  integrity sha512-83K5C2nIAgoZlzMegf0/MEBjX+ampUyc/u79RxgX9ZYjzos+RQtNyO7I43dztVxPXSwAnX9XRgoOfkGWA4nbig==
+  dependencies:
+    "@commitlint/format" "^8.1.0"
+    "@commitlint/lint" "^8.1.0"
+    "@commitlint/load" "^8.1.0"
+    "@commitlint/read" "^8.1.0"
+    babel-polyfill "6.26.0"
+    chalk "2.3.1"
+    get-stdin "7.0.0"
+    lodash "4.17.14"
+    meow "5.0.0"
+    resolve-from "5.0.0"
+    resolve-global "1.0.0"
+
 "@commitlint/cli@^7.6.1":
   version "7.6.1"
   resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-7.6.1.tgz#a93cf995082831999937f6d5ec1a582c8fc0393a"
@@ -1079,23 +1096,6 @@
     chalk "2.3.1"
     get-stdin "7.0.0"
     lodash "4.17.11"
-    meow "5.0.0"
-    resolve-from "5.0.0"
-    resolve-global "1.0.0"
-
-"@commitlint/cli@^8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-8.1.0.tgz#a3d4236c0ac961d7026a53d728b179c696d6a045"
-  integrity sha512-83K5C2nIAgoZlzMegf0/MEBjX+ampUyc/u79RxgX9ZYjzos+RQtNyO7I43dztVxPXSwAnX9XRgoOfkGWA4nbig==
-  dependencies:
-    "@commitlint/format" "^8.1.0"
-    "@commitlint/lint" "^8.1.0"
-    "@commitlint/load" "^8.1.0"
-    "@commitlint/read" "^8.1.0"
-    babel-polyfill "6.26.0"
-    chalk "2.3.1"
-    get-stdin "7.0.0"
-    lodash "4.17.14"
     meow "5.0.0"
     resolve-from "5.0.0"
     resolve-global "1.0.0"
@@ -2362,18 +2362,6 @@
     commitlint-format-json "^1.1.0"
     execa "^1.0.0"
     npmlog "^4.1.2"
-
-"@monstrs/github-checks-formatter-commitlint@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@monstrs/github-checks-formatter-commitlint/-/github-checks-formatter-commitlint-1.1.4.tgz#a9febfece93d817719e34e16cbc30ddfffab6c88"
-  integrity sha512-KujQWBu3rvYniBQXBHsGbx+dRiyMn+/GLwsAMHwDZ2+xnXHkFoyE5X3sqI4A2m5+2+gONLDqwWnSexEwBZlL2g==
-  dependencies:
-    "@monstrs/github-checks-formatter-common" "1.1.4"
-
-"@monstrs/github-checks-formatter-common@1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@monstrs/github-checks-formatter-common/-/github-checks-formatter-common-1.1.4.tgz#1b9aad88691fabb6f88f969309eebcd736588a01"
-  integrity sha512-mywpZgp4pDUrtBalHPEntwEdoosI2gluch/eXhGrYpqzgnwGdcmqGyLAqyGuTzqAENZVCeQIMjxhFI9caF1qjw==
 
 "@monstrs/next-app-with-apollo@^0.1.1":
   version "0.1.7"
@@ -14132,6 +14120,36 @@ webpack@4.31.0:
   version "4.31.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.31.0.tgz#ae201d45f0571336e42d1c2b5c8ab56c4d3b0c63"
   integrity sha512-n6RVO3X0LbbipoE62akME9K/JI7qYrwwufs20VvgNNpqUoH4860KkaxJTbGq5bgkVZF9FqyyTG/0WPLH3PVNJA==
+  dependencies:
+    "@webassemblyjs/ast" "1.8.5"
+    "@webassemblyjs/helper-module-context" "1.8.5"
+    "@webassemblyjs/wasm-edit" "1.8.5"
+    "@webassemblyjs/wasm-parser" "1.8.5"
+    acorn "^6.0.5"
+    acorn-dynamic-import "^4.0.0"
+    ajv "^6.1.0"
+    ajv-keywords "^3.1.0"
+    chrome-trace-event "^1.0.0"
+    enhanced-resolve "^4.1.0"
+    eslint-scope "^4.0.0"
+    json-parse-better-errors "^1.0.2"
+    loader-runner "^2.3.0"
+    loader-utils "^1.1.0"
+    memory-fs "~0.4.1"
+    micromatch "^3.1.8"
+    mkdirp "~0.5.0"
+    neo-async "^2.5.0"
+    node-libs-browser "^2.0.0"
+    schema-utils "^1.0.0"
+    tapable "^1.1.0"
+    terser-webpack-plugin "^1.1.0"
+    watchpack "^1.5.0"
+    webpack-sources "^1.3.0"
+
+webpack@4.32.2:
+  version "4.32.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.32.2.tgz#3639375364a617e84b914ddb2c770aed511e5bc8"
+  integrity sha512-F+H2Aa1TprTQrpodRAWUMJn7A8MgDx82yQiNvYMaj3d1nv3HetKU0oqEulL9huj8enirKi8KvEXQ3QtuHF89Zg==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"

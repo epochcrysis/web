@@ -63,5 +63,8 @@
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
+  },
+  "dependencies": {
+    "webpack": "4.32.2"
   }
 }
