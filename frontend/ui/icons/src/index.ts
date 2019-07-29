@@ -1,3 +1,3 @@
 export * from './ChevronUpIcon'
 export * from './LogoIcon'
-export * from './TAIcon'
+export * from './TaIcon'

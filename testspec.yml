@@ -13,3 +13,4 @@ phases:
       - yarn test --json --outputFile test-results.json --testLocationInResults --testFailureExitCode 0 && cat ./test-results.json | yarn beholder-cli --target jest --verbose
       - yarn typecheck --pretty false | yarn beholder-cli --target tsc --verbose
       - yarn lint -t json -o ./lint-results.json --force && cat ./lint-results.json | yarn github-checks-cli --target tslint --verbose
+      - yarn commitlint-codebuild-cli && cat ./commitlint-results.json | yarn beholder-cli --target commitlint --verbose

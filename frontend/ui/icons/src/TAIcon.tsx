@@ -1,6 +1,15 @@
 import React from 'react'
-export const TorinasakuraIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg width='1em' height='1em' viewBox='0 0 320 320' style={{}} {...props}>
+export const TaIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    width='1em'
+    height='1em'
+    viewBox='0 0 320 320'
+    className='el-image uk-text-emphasis uk-svg uk-scrollspy-inview uk-animation-stroke'
+    uk-scrollspy-class='uk-animation-stroke'
+    data-svg='https://epochcrysis.band/wp-content/uploads/2018/11/TA_logo_White_1.svg'
+    style={{}}
+    {...props}
+  >
     <title>{'TA_logo_White_1'}</title>
     <desc>{'Created with Sketch.'}</desc>
     <defs />
@@ -11,7 +20,7 @@ export const TorinasakuraIcon = (props: React.SVGProps<SVGSVGElement>) => (
       fill='none'
       fillRule='evenodd'
     >
-      <g id='TA_B' fill={props.fill ? props.fill : '#1F2937'}>
+      <g id='TA_B' fill='#1F2937'>
         <path
           d='M225.691057,106.666667 L93.6585366,106.666667 L93.6585366,128.078049 L151.310569,128.078049 L100.214634,216.533333 L118.764228,227.252033 L172.669919,133.879675 L162.57561,128.052033 L225.691057,128.052033 L225.691057,106.666667 Z M186.43252,152.481301 L223.401626,216.507317 L204.852033,227.226016 L167.882927,163.2 L186.43252,152.481301 Z'
           id='Shape-Copy-16'

@@ -4,6 +4,6 @@ module.exports = {
     '@commitlint/config-conventional',
   ],
   rules: {
-    'scope-enum': [0, 'always', ['common', 'frontend', 'wordpress']],
+    'scope-enum': [0, 'always', ['deps', 'common', 'frontend', 'wordpress']],
   },
 }
