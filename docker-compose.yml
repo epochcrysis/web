@@ -20,6 +20,7 @@ services:
     volumes:
       - ./:/workspace
       - modules:/workspace/node_modules
+      - yarncache:/workspace/.yarn-cache
     entrypoint: yarn
 
   wordpress-db:
@@ -95,6 +96,7 @@ services:
 
 volumes:
   modules:
+  yarncache:
   wordpress:
 
 networks:
