@@ -1,6 +1,6 @@
 {
   "name": "@site/app",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "src/index.ts",
   "scripts": {
@@ -43,7 +43,7 @@
     "@types/express-session": "1.15.12",
     "@types/next": "8.0.5",
     "react-test-renderer": "16.8.6",
-    "ts-node": "8.1.1",
+    "ts-node": "8.2.0",
     "typescript": "3.4.5"
   }
 }

@@ -18,6 +18,6 @@
   },
   "dependencies": {
     "@ui-parts/react-router": "0.1.6",
-    "styled-system": "4.2.2"
+    "styled-system": "4.2.3"
   }
 }

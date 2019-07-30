@@ -9,6 +9,6 @@
     "react": "^16.8.1"
   },
   "dependencies": {
-    "styled-system": "4.2.2"
+    "styled-system": "4.2.3"
   }
 }
