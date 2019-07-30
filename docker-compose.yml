@@ -15,7 +15,7 @@ services:
         ipv4_address: 172.16.233.66
 
   yarn:
-    image: node:11-alpine
+    image: node:alpine
     working_dir: /workspace
     volumes:
       - ./:/workspace
@@ -75,7 +75,7 @@ services:
       - traefik
 
   site:
-    image: node:11-alpine
+    image: node:alpine
     working_dir: /workspace
     volumes:
       - ./:/workspace
