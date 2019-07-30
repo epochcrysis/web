@@ -8,7 +8,7 @@
     "typecheck": "NODE_OPTIONS=--max_old_space_size=4096 tsc --noEmit",
     "test": "yarn jest",
     "coverage:ci": "yarn codecov",
-    "postinstall": "lerna run compile",
+    "compile": "lerna run compile",
     "site:dev": "yarn workspace @site/app dev"
   },
   "devDependencies": {

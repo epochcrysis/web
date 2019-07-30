@@ -21,6 +21,8 @@ services:
       - ./:/workspace
       - modules:/workspace/node_modules
       - yarncache:/workspace/.yarn-cache
+    environment:
+      - YARN_CACHE_FOLDER=/workspace/.yarn-cache
     entrypoint: yarn
 
   wordpress-db:
