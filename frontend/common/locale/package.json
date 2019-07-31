@@ -16,6 +16,6 @@
     "redux-cases": "0.4.1"
   },
   "devDependencies": {
-    "@types/react-intl": "2.3.17"
+    "@types/react-intl": "2.3.18"
   }
 }
