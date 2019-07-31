@@ -4,12 +4,15 @@ import { Navigation } from '@site/navigation'
 import { Footer } from '@site/footer'
 
 export const IndexPage = () => (
-  <Column>
-    <Layout>
-      <Navigation />
-    </Layout>
-    <Layout>
-      <Footer />
-    </Layout>
-  </Column>
+  <StickyContainer>
+    <Column>
+      <Layout>
+        <Navigation withTopOffset={true} />
+      </Layout>
+      <Layout basis='2000px' />
+      <Layout>
+        <Footer />
+      </Layout>
+    </Column>
+  </StickyContainer>
 )
