@@ -15,12 +15,14 @@ services:
         ipv4_address: 172.16.233.66
 
   yarn:
-    image: node:11-alpine
+    image: node:alpine
     working_dir: /workspace
     volumes:
       - ./:/workspace
       - modules:/workspace/node_modules
       - yarncache:/workspace/.yarn-cache
+    environment:
+      - YARN_CACHE_FOLDER=/workspace/.yarn-cache
     entrypoint: yarn
 
   wordpress-db:
@@ -73,7 +75,7 @@ services:
       - traefik
 
   site:
-    image: node:11-alpine
+    image: node:alpine
     working_dir: /workspace
     volumes:
       - ./:/workspace

@@ -1,6 +1,6 @@
 {
   "name": "@site/app",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "src/index.ts",
   "scripts": {
@@ -13,7 +13,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
-    "@monstrs/next-app-with-apollo": "^0.1.1",
+    "@monstrs/next-app-with-apollo": "^0.1.2",
     "@monstrs/next-app-with-cookies": "^0.1.0",
     "@monstrs/next-app-with-emotion": "^0.1.0",
     "@monstrs/next-app-with-intl": "^0.1.0",

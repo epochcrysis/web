@@ -1,6 +1,6 @@
 {
-  "name": "@ui/text",
-  "version": "0.3.0",
+  "name": "@ui/navigation",
+  "version": "0.0.0",
   "license": "MIT",
   "private": true,
   "main": "src/index.ts",
@@ -17,6 +17,8 @@
     "react-test-renderer": "16.8.6"
   },
   "dependencies": {
-    "styled-system": "4.2.3"
+    "@ui-parts/use-window-size": "0.1.0",
+    "react-sticky": "6.0.3",
+    "styled-system": "4.2.4"
   }
 }

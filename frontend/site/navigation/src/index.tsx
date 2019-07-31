@@ -1,3 +1,1 @@
-import React from 'react'
-
-export const Navigation = () => <div>Navigation</div>
+export * from './components/Navigation'
