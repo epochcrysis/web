@@ -1,24 +1,24 @@
 {
-	  "name": "@ui/navigation",
-	  "version": "0.0.0",
-	  "license": "MIT",
-	  "private": true,
-	  "main": "src/index.ts",
-	  "peerDependencies": {
-	    "@emotion/styled": "^10.0.7",
-	    "react": "^16.8.1"
-	  },
-	  "devDependencies": {
-	    "@emotion/core": "10.0.10",
-	    "@emotion/styled": "10.0.11",
-	    "@ui/theme": "0.2.0",
-	    "jest-emotion": "10.0.11",
-	    "react": "16.8.6",
-	    "react-test-renderer": "16.8.6"
-	  },
-	  "dependencies": {
-	    "@ui-parts/use-window-size": "^0.1.0",
-	    "react-sticky": "^6.0.3",
-	    "styled-system": "4.2.4"
-	  }
-	}
+  "name": "@ui/navigation",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "src/index.ts",
+  "peerDependencies": {
+    "@emotion/styled": "^10.0.7",
+    "react": "^16.8.1"
+  },
+  "devDependencies": {
+    "@emotion/core": "10.0.10",
+    "@emotion/styled": "10.0.11",
+    "@ui/theme": "0.2.0",
+    "jest-emotion": "10.0.11",
+    "react": "16.8.6",
+    "react-test-renderer": "16.8.6"
+  },
+  "dependencies": {
+    "@ui-parts/use-window-size": "^0.1.0",
+    "react-sticky": "^6.0.3",
+    "styled-system": "4.2.4"
+  }
+}

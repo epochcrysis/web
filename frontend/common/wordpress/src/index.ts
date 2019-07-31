@@ -1,1 +1,1 @@
-export * from './withMenuItems'
+export * from './useMenuItems'
