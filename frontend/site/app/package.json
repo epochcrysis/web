@@ -43,7 +43,7 @@
     "@types/express-session": "1.15.13",
     "@types/next": "8.0.5",
     "react-test-renderer": "16.8.6",
-    "ts-node": "8.2.0",
+    "ts-node": "8.3.0",
     "typescript": "3.4.5"
   }
 }
