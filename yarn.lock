@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aunited/beholder-cli@^1.1.0":
+"@aunited/beholder-cli@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@aunited/beholder-cli/-/beholder-cli-1.1.0.tgz#07d59e8442aee1744f8ee5d79895bc99cc7c9ab1"
   integrity sha512-w9wgL20wkHUSdgU2wzXBWBJdm4hNlD2U9TWVhLFrCzybUhs33IeqSYEmhsr6ns7iM8VUkEF3ufeII/sklliSQA==
@@ -18,21 +18,21 @@
   resolved "https://registry.yarnpkg.com/@aunited/beholder-formatter-common/-/beholder-formatter-common-1.1.0.tgz#e679b01c653f5fbc95887c518a4e045521909630"
   integrity sha512-VesNTHcdIQhdTv76VjwvWsFO6U8ZRsJSicWNmzDVeNGIkamp18YjZicn5jP7MwtcC0zuMP6vWkh7PiZv55KOTw==
 
-"@aunited/beholder-formatter-jest@^1.4.0":
+"@aunited/beholder-formatter-jest@1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@aunited/beholder-formatter-jest/-/beholder-formatter-jest-1.5.2.tgz#80858d729caaf49e6e4cbff1583a0c6a6de03f0c"
   integrity sha512-MDmcc8PzReAE71Twhk83c94T8xThX8t2hIJrZQcWe0YVWtn2oWRYVcQypRONHAKte1y9mxOcatNTO3KFWN4ZoQ==
   dependencies:
     "@aunited/beholder-formatter-common" "1.1.0"
 
-"@aunited/beholder-formatter-tsc@^1.5.1":
+"@aunited/beholder-formatter-tsc@1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@aunited/beholder-formatter-tsc/-/beholder-formatter-tsc-1.5.1.tgz#6ae19d22303bbd525099c88ab07f817e06fa8acf"
   integrity sha512-osZ3YZZBhldOIoOQ3FutohzsK1cNd6luZk9dt0uutiJPf4x86GuFgxOqcNoDjqScaIJs2gDDaz8RpMt1T5aerg==
   dependencies:
     "@aunited/beholder-formatter-common" "1.1.0"
 
-"@aunited/beholder-formatter-tslint@^1.1.0":
+"@aunited/beholder-formatter-tslint@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@aunited/beholder-formatter-tslint/-/beholder-formatter-tslint-1.1.0.tgz#393e3225621e44d7bf0555879b04f6f978b7c63a"
   integrity sha512-gN4tts0MFmdFQWFguxxNlfxBCztcM2dy/Bd1DPd0CDAyBwQOJwhpujAcjZ0DwE1iJXVnyOT7eQrGGYP1nDryXA==
@@ -2353,7 +2353,7 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@monstrs/commitlint-codebuild-cli@^0.1.17":
+"@monstrs/commitlint-codebuild-cli@0.1.17":
   version "0.1.17"
   resolved "https://registry.yarnpkg.com/@monstrs/commitlint-codebuild-cli/-/commitlint-codebuild-cli-0.1.17.tgz#5652cc21507ceacff0ff1374ba1ea2f65b3edb41"
   integrity sha512-HLPYnGcta+JLMJ8iix+ym+Qr6F3piFZVASo9mnSfRUMVA90L2EYlxdg7roBkxzk3GWmYHjM/WDpBww6+7hBitQ==
@@ -2897,7 +2897,7 @@
   resolved "https://registry.yarnpkg.com/@ui-parts/react-router/-/react-router-0.1.6.tgz#768b832b85eca44298092ba47ec38cf0853fe117"
   integrity sha512-3U9srK6Q9dDugourDKMAtEloagA/fZoPaJ/D+lScO8eMHJKYbr5GfIQZFIhxGvGZyHoovafbEn9Nwdi4gkEa5w==
 
-"@ui-parts/use-window-size@^0.1.0":
+"@ui-parts/use-window-size@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@ui-parts/use-window-size/-/use-window-size-0.1.0.tgz#797a008aca1b503c11b0d59b111e13d1e1e86812"
   integrity sha512-pZ/3UegJRxNvLZyMh+WK2xRKsL1y9g7zyIG8kPGMa3XSFBEjd6aaB6AO9XDhuDH41yrdoT9nWZONhnQ9agWSpQ==
@@ -11708,7 +11708,7 @@ react-ssr-prepass@1.0.2:
   dependencies:
     object-is "^1.0.1"
 
-react-sticky@^6.0.3:
+react-sticky@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-6.0.3.tgz#7a18b643e1863da113d7f7036118d2a75d9ecde4"
   integrity sha512-LNH4UJlRatOqo29/VHxDZOf6fwbgfgcHO4mkEFvrie5FuaZCSTGtug5R8NGqJ0kSnX8gHw8qZN37FcvnFBJpTQ==
