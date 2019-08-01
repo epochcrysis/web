@@ -2401,7 +2401,7 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@monstrs/commitlint-codebuild-cli@^0.1.17":
+"@monstrs/commitlint-codebuild-cli@0.1.17":
   version "0.1.17"
   resolved "https://registry.yarnpkg.com/@monstrs/commitlint-codebuild-cli/-/commitlint-codebuild-cli-0.1.17.tgz#5652cc21507ceacff0ff1374ba1ea2f65b3edb41"
   integrity sha512-HLPYnGcta+JLMJ8iix+ym+Qr6F3piFZVASo9mnSfRUMVA90L2EYlxdg7roBkxzk3GWmYHjM/WDpBww6+7hBitQ==
@@ -2430,14 +2430,14 @@
   resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-cookies/-/next-app-with-cookies-0.1.4.tgz#0e135ff00241021e3811aac226d37f02124ed963"
   integrity sha512-Wls/+Q7PTHFNjN2h//emrJgGm0ac+RPCy8oSdOf/1xQvYfNLnEAz5TTgvnvid0VMcf23nF+cFLlkpWqBrn0vqQ==
 
-"@monstrs/next-app-with-emotion@^0.1.0":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-emotion/-/next-app-with-emotion-0.1.4.tgz#08dedeb596a39d4f11aeefa1c457212bb01f5213"
-  integrity sha512-DJz+UqyFLT6H1gD+idRm3Ob0wW5We6jOAYi+JdNIcVCq/LhF56iYnfiJwKdri96xWxQ+ZP1QQbKQ6nGnpuUUxQ==
+"@monstrs/next-app-with-emotion@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-emotion/-/next-app-with-emotion-0.2.0.tgz#1317ce7f808e6d6cf244ba6888c5490ab30c33a6"
+  integrity sha512-pjeQC4sdVNOGJOqPVGDRIaaTsA0bigPKqFzwqsIVgjWEpXeFYMY/y/xg7kbUbk40cyeR4/oH9gVyv4RBPGcH1w==
   dependencies:
-    emotion "^10.0.9"
-    emotion-server "^10.0.9"
-    emotion-theming "^10.0.9"
+    emotion "^10.0.14"
+    emotion-server "^10.0.14"
+    emotion-theming "^10.0.14"
 
 "@monstrs/next-app-with-helmet@^0.1.2":
   version "0.1.4"
@@ -5988,7 +5988,7 @@ emojis-list@^2.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
-emotion-server@^10.0.9:
+emotion-server@^10.0.14:
   version "10.0.14"
   resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-10.0.14.tgz#dd4146f1e827c7dcb1861bbd92e420d50167e83f"
   integrity sha512-lxRyEISpiF8G7Q3Dt8xnK+flWfWeimo2PDRO8Me3zosUDJe8J2AzYe7pe80pFs3GMeOES98oV7/Ah5tiCTAGjw==
@@ -6004,7 +6004,7 @@ emotion-theming@10.0.10:
     hoist-non-react-statics "^3.3.0"
     object-assign "^4.1.1"
 
-emotion-theming@^10.0.9:
+emotion-theming@^10.0.14:
   version "10.0.14"
   resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.14.tgz#e548d388493d07bedbb0d9d3bbe221766174b1f4"
   integrity sha512-zMGhPSYz48AAR6DYjQVaZHeO42cYKPq4VyB1XjxzgR62/NmO99679fx8qDDB1QZVYGkRWZtsOe+zJE/e30XdbA==
@@ -6013,7 +6013,7 @@ emotion-theming@^10.0.9:
     "@emotion/weak-memoize" "0.2.3"
     hoist-non-react-statics "^3.3.0"
 
-emotion@^10.0.9:
+emotion@^10.0.14:
   version "10.0.14"
   resolved "https://registry.yarnpkg.com/emotion/-/emotion-10.0.14.tgz#d7702a6147de6e8ce863dacde98418a467c5fed4"
   integrity sha512-6cTWfwqVGy9UinGSZQKRGyuRsRGkzlT0MaeH2pF4BvL7u6PnyTZeyHj4INwzpaXBLwA9C0JaFqS31J62RWUNNw==
