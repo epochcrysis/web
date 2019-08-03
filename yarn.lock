@@ -2209,7 +2209,7 @@
   dependencies:
     semver "^6.2.0"
 
-"@lerna/project@3.16.0", "@lerna/project@^3.13.1":
+"@lerna/project@3.16.0", "@lerna/project@^3.15.0":
   version "3.16.0"
   resolved "https://registry.yarnpkg.com/@lerna/project/-/project-3.16.0.tgz#2469a4e346e623fd922f38f5a12931dfb8f2a946"
   integrity sha512-NrKcKK1EqXqhrGvslz6Q36+ZHuK3zlDhGdghRqnxDcHxMPT01NgLcmsnymmQ+gjMljuLRmvKYYCuHrknzX8VrA==
@@ -2483,14 +2483,13 @@
   dependencies:
     globby "^10.0.1"
 
-"@monstrs/next-config-with-workspaces@^0.1.2":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@monstrs/next-config-with-workspaces/-/next-config-with-workspaces-0.1.4.tgz#6e09452443a3d5f82e0c1cad8babcffe41a8ca34"
-  integrity sha512-qea9pkp9XJM65d+vFI0GY9aP4etMsowcmOiITOLPYYPfPglEvJUrKxynQbQAqdSI+4ZtEF2v0OexSAPXi4CASQ==
+"@monstrs/next-config-with-workspaces@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@monstrs/next-config-with-workspaces/-/next-config-with-workspaces-0.3.0.tgz#70789cc474e9d85083fb40ed23b80e7a90b2dde7"
+  integrity sha512-YcSHulUeHeP6cPdlP2gwYPiyqgn6byKSo4rfwVIhapKx4+kixRIkFaDEqScCDfhKsr8wuw9K2zXD/BYF8E6gKQ==
   dependencies:
-    "@lerna/project" "^3.13.1"
-    globby "^9.1.0"
-    load-json-file "^5.2.0"
+    "@lerna/project" "^3.15.0"
+    globby "^10.0.1"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -7374,7 +7373,7 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-globby@^9.1.0, globby@^9.2.0:
+globby@^9.2.0:
   version "9.2.0"
   resolved "https://registry.yarnpkg.com/globby/-/globby-9.2.0.tgz#fd029a706c703d29bdd170f4b6db3a3f7a7cb63d"
   integrity sha512-ollPHROa5mcxDEkwg6bPt3QbEf4pDQSNtd6JPL1YvOvAo/7/0VAm9TccUeoTmarjPw4pfUthSCqcyfNB1I3ZSg==
@@ -9272,7 +9271,7 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
-load-json-file@^5.2.0, load-json-file@^5.3.0:
+load-json-file@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-5.3.0.tgz#4d3c1e01fa1c03ea78a60ac7af932c9ce53403f3"
   integrity sha512-cJGP40Jc/VXUsp8/OrnyKyTZ1y6v/dphm3bioS+RrKXjK2BB6wHUd6JptZEFDGgGahMT+InnZO5i1Ei9mpC8Bw==
