@@ -2401,7 +2401,7 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@monstrs/commitlint-codebuild-cli@^0.1.17":
+"@monstrs/commitlint-codebuild-cli@0.1.17":
   version "0.1.17"
   resolved "https://registry.yarnpkg.com/@monstrs/commitlint-codebuild-cli/-/commitlint-codebuild-cli-0.1.17.tgz#5652cc21507ceacff0ff1374ba1ea2f65b3edb41"
   integrity sha512-HLPYnGcta+JLMJ8iix+ym+Qr6F3piFZVASo9mnSfRUMVA90L2EYlxdg7roBkxzk3GWmYHjM/WDpBww6+7hBitQ==
@@ -2439,10 +2439,10 @@
     emotion-server "^10.0.9"
     emotion-theming "^10.0.9"
 
-"@monstrs/next-app-with-helmet@^0.1.2":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-helmet/-/next-app-with-helmet-0.1.4.tgz#8ed25e5c1bcbc33d437fb37daed485c79d42d989"
-  integrity sha512-z9eYCvrOSUdTw2CK0fOa/IP5m5syUNN05bvmY5FoFYEVS6bwmd4ZgnWdD/hxa1qgORIT8zQJdJJ1sxh27iTi4Q==
+"@monstrs/next-app-with-helmet@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-helmet/-/next-app-with-helmet-0.2.0.tgz#737b7f71f2e2e640aa0979839174b92d091ae85d"
+  integrity sha512-tf0H6xPFeOlCKNUr211Xnoa00mi3ZejRvv9+ybQxqjyjBfBp/iblJe4esCNCxmbJ88e38MInXbJK6U3lETgmug==
 
 "@monstrs/next-app-with-intl@^0.1.0":
   version "0.1.9"
