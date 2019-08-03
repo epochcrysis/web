@@ -2444,10 +2444,10 @@
   resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-helmet/-/next-app-with-helmet-0.2.0.tgz#737b7f71f2e2e640aa0979839174b92d091ae85d"
   integrity sha512-tf0H6xPFeOlCKNUr211Xnoa00mi3ZejRvv9+ybQxqjyjBfBp/iblJe4esCNCxmbJ88e38MInXbJK6U3lETgmug==
 
-"@monstrs/next-app-with-intl@^0.1.0":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-intl/-/next-app-with-intl-0.1.9.tgz#33e27acb301ac29c89473a51774a6c7e3545009a"
-  integrity sha512-ZbJUWQrf4QxskdJr7vM6HghMdZ0HBRAjPzArPGKUWIyQaO+UTyGJButL40wYxM8JcvQYaTD0hzeAdcgm5q4OEw==
+"@monstrs/next-app-with-intl@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-intl/-/next-app-with-intl-0.2.0.tgz#b19f42f47587d03e4fbc021a5345beb53da7ded0"
+  integrity sha512-MQpvcc2iBb9UmhKiXhbBB0UyLRpYd396KXyjBgaqgUqL6WnLFNyGleIDxIJzyvjHrtNAXs+XwQqYSClbIIrtIA==
 
 "@monstrs/next-config-with-path-map@^0.1.1":
   version "0.1.4"
