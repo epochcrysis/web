@@ -3,7 +3,6 @@ import { Navigation } from '@ui/navigation'
 import { Row, Layout, Box } from '@ui/layout'
 import { LogoIcon } from '@ui/icons'
 import { Link } from '@ui/link'
-import { useWindowSize } from '@ui-parts/use-window-size'
 
 export const Desktop = ({ offset }) => (
   <Box display={['none', 'flex', 'flex']} width='100%'>
