@@ -1,10 +1,11 @@
 {
   "name": "@site/navigation",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "license": "MIT",
   "private": true,
   "main": "src/index.tsx",
   "dependencies": {
+    "@ui-parts/use-window-size": "^0.1.0",
     "react": "16.8.6",
     "react-intl": "2.9.0"
   },

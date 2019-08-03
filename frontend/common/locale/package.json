@@ -1,6 +1,6 @@
 {
   "name": "@common/locale",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "private": true,
   "main": "src/index.ts",
@@ -16,6 +16,6 @@
     "redux-cases": "0.4.1"
   },
   "devDependencies": {
-    "@types/react-intl": "2.3.17"
+    "@types/react-intl": "2.3.18"
   }
 }

@@ -3,13 +3,13 @@ import styled from '@emotion/styled'
 import { ifProp } from 'styled-tools'
 import { Sticky } from 'react-sticky'
 
-export interface StyledNavigationProps {
+export interface NavigationProps {
   isSticky?: boolean
   wasSticky?: boolean
   wasLoad?: boolean
 }
 
-const StyledNavigation = styled.div<StyledNavigationProps>(
+const StyledNavigation = styled.div<NavigationProps>(
   () => ({
     display: 'flex',
     width: '100%',
@@ -20,6 +20,12 @@ const StyledNavigation = styled.div<StyledNavigationProps>(
       from: { marginTop: '-90px' },
       to: { marginTop: 0 },
     },
+    '@media (max-width: 40em)': {
+      height: '60px',
+    },
+  }),
+  ifProp([{ isSticky: true }, { wasSticky: false }], {
+    animation: 'animate 0.2s linear',
   }),
   ifProp([{ isSticky: true }, { wasSticky: true }], {
     animation: 'animate 0.2s linear',
@@ -31,12 +37,13 @@ const StyledNavigation = styled.div<StyledNavigationProps>(
 
 const StyledSticky = styled.div({
   width: '100%',
+  zIndex: 15,
   '& > div': {
     width: '100%',
   },
 })
 
-export const Navigation = ({ children, topOffset }) => {
+export const Navigation = ({ children, topOffset = 0 }) => {
   const [wasLoad, setWasLoad] = useState(false)
 
   const onLoad = () => {

@@ -1,15 +1,12 @@
 import React from 'react'
-import { Navigation as UINavigation } from '@ui/navigation'
-import { Row, Layout } from '@ui/layout'
+import { Navigation } from '@ui/navigation'
+import { Row, Layout, Box } from '@ui/layout'
 import { LogoIcon } from '@ui/icons'
 import { Link } from '@ui/link'
-import { useWindowSize } from '@ui-parts/use-window-size'
 
-export const Navigation = ({ withTopOffset = false }) => {
-  const { innerHeight: offset } = useWindowSize()
-
-  return (
-    <UINavigation topOffset={withTopOffset ? offset : 0}>
+export const Desktop = ({ offset }) => (
+  <Box display={['none', 'flex', 'flex']} width='100%'>
+    <Navigation topOffset={offset}>
       <Row align='center' justify='space-between'>
         <Layout basis='40px' />
         <Layout>
@@ -21,6 +18,6 @@ export const Navigation = ({ withTopOffset = false }) => {
         <Layout />
         <Layout basis='40px' />
       </Row>
-    </UINavigation>
-  )
-}
+    </Navigation>
+  </Box>
+)
