@@ -1,6 +1,8 @@
 FROM wordpress:php7.3-fpm
 
 RUN mv "$PHP_INI_DIR"/php.ini-development "$PHP_INI_DIR"/php.ini
+RUN sed -i.bak '/^ *post_max_size/s/=.*/= 64M/' "$PHP_INI_DIR"/php.ini
+RUN sed -i.bak '/^ *upload_max_filesize/s/=.*/= 64M/' "$PHP_INI_DIR"/php.ini
 
 # install_wordpress.sh & misc. dependencies
 RUN apt-get update; \
