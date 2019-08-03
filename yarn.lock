@@ -2425,10 +2425,10 @@
     react-apollo "^2.5.3"
     react-apollo-hooks "^0.4.5"
 
-"@monstrs/next-app-with-cookies@^0.1.0":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-cookies/-/next-app-with-cookies-0.1.4.tgz#0e135ff00241021e3811aac226d37f02124ed963"
-  integrity sha512-Wls/+Q7PTHFNjN2h//emrJgGm0ac+RPCy8oSdOf/1xQvYfNLnEAz5TTgvnvid0VMcf23nF+cFLlkpWqBrn0vqQ==
+"@monstrs/next-app-with-cookies@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-cookies/-/next-app-with-cookies-0.2.0.tgz#f7a7829124fc38b5570ccc05286f22eb740f8ec9"
+  integrity sha512-qavs4uXHzzgMv5ZSqDkdbLq3pHcybivwWq51mD2iSIF9qyzQJVAmrXcds40J6qnj5YooRn7a2YFoqh8prxIuNg==
 
 "@monstrs/next-app-with-emotion@^0.2.0":
   version "0.2.0"
