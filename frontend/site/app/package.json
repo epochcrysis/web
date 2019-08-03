@@ -18,7 +18,7 @@
     "@monstrs/next-app-with-emotion": "^0.2.0",
     "@monstrs/next-app-with-helmet": "^0.2.0",
     "@monstrs/next-app-with-intl": "^0.2.0",
-    "@monstrs/next-config-with-path-map": "^0.1.1",
+    "@monstrs/next-config-with-path-map": "^0.2.0",
     "@monstrs/next-config-with-workspaces": "^0.1.2",
     "@ui-parts/react-router": "^0.1.6",
     "@zeit/next-typescript": "1.1.1",
