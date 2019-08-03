@@ -2988,7 +2988,7 @@
   resolved "https://registry.yarnpkg.com/@ui-parts/react-router/-/react-router-0.1.6.tgz#768b832b85eca44298092ba47ec38cf0853fe117"
   integrity sha512-3U9srK6Q9dDugourDKMAtEloagA/fZoPaJ/D+lScO8eMHJKYbr5GfIQZFIhxGvGZyHoovafbEn9Nwdi4gkEa5w==
 
-"@ui-parts/use-window-size@0.1.0", "@ui-parts/use-window-size@^0.1.0":
+"@ui-parts/use-window-size@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@ui-parts/use-window-size/-/use-window-size-0.1.0.tgz#797a008aca1b503c11b0d59b111e13d1e1e86812"
   integrity sha512-pZ/3UegJRxNvLZyMh+WK2xRKsL1y9g7zyIG8kPGMa3XSFBEjd6aaB6AO9XDhuDH41yrdoT9nWZONhnQ9agWSpQ==
