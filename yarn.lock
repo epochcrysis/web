@@ -2401,7 +2401,7 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@monstrs/commitlint-codebuild-cli@^0.1.17":
+"@monstrs/commitlint-codebuild-cli@0.1.17":
   version "0.1.17"
   resolved "https://registry.yarnpkg.com/@monstrs/commitlint-codebuild-cli/-/commitlint-codebuild-cli-0.1.17.tgz#5652cc21507ceacff0ff1374ba1ea2f65b3edb41"
   integrity sha512-HLPYnGcta+JLMJ8iix+ym+Qr6F3piFZVASo9mnSfRUMVA90L2EYlxdg7roBkxzk3GWmYHjM/WDpBww6+7hBitQ==
@@ -2411,7 +2411,7 @@
     execa "^1.0.0"
     npmlog "^4.1.2"
 
-"@monstrs/next-app-with-apollo@^0.1.2":
+"@monstrs/next-app-with-apollo@^0.1.3":
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/@monstrs/next-app-with-apollo/-/next-app-with-apollo-0.1.7.tgz#85aab925b4a5f5c270a0d13474d13202c1a4b8b4"
   integrity sha512-ItEJCi5x5q9hZCDTA6z1kxy8xFeTWm573UtPaBI1bP0MPqtXmMGvMsZ1mtupPry0H6Pidt5oE9jTXAa/mvdAuA==
