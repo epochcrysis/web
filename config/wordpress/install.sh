@@ -21,7 +21,7 @@ then
     exit
 fi
 
-wp core download --force
+wp core download --force  --version=5.2.2
 
 [ -f wp-config.php ] || wp config create \
     --dbhost="$WORDPRESS_DB_HOST" \
@@ -44,9 +44,11 @@ fi
 wp theme activate default-theme
 wp theme delete twentysixteen twentyseventeen twentynineteen
 
+wp config set WP_AUTO_UPDATE_CORE false
+
 wp plugin delete akismet hello
 wp plugin install --activate --force \
-    wp-multilang \
+wp plugin install --force --activate https://github.com/polylang/polylang/archive/2.5.4.zip
     https://github.com/wp-graphql/wp-graphql/archive/master.zip \
     https://github.com/wp-graphql/wp-graphql-jwt-authentication/archive/v0.3.1.zip
 
