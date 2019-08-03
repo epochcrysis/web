@@ -1,6 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import { withProviders } from '../providers'
+import { Seo } from '@common/Wordpress'
 
 class SiteApp extends App {
   render() {
@@ -8,6 +9,7 @@ class SiteApp extends App {
 
     return (
       <Container>
+        <Seo />
         <Component {...this.props} />
       </Container>
     )
