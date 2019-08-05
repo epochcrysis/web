@@ -1,6 +1,6 @@
 {
-  "name": "@ui/navigation",
-  "version": "0.2.0",
+  "name": "@ui/sticky",
+  "version": "0.0.0",
   "license": "MIT",
   "private": true,
   "main": "src/index.ts",
@@ -17,7 +17,7 @@
     "react-test-renderer": "16.8.6"
   },
   "dependencies": {
-    "body-scroll-lock": "^2.6.1",
+    "raf": "^3.4.1",
     "styled-system": "4.2.4"
   }
 }

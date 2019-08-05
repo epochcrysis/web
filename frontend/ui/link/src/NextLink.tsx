@@ -4,6 +4,7 @@ import { NavLink } from './NavLink'
 import { Link } from './Link'
 
 interface NextLinkProps {
+  color?: string
   href: string
   children: any
 }
@@ -25,6 +26,7 @@ export const NextLink = withRouter(
 export const NextNavLink = withRouter(
   ({ router, href, children, ...props }: WithRouterProps & NextLinkProps) => (
     <NavLink
+      {...props}
       href={href}
       active={router.pathname === href}
       onClick={event => {

@@ -1,9 +1,10 @@
-import { ifProp } from 'styled-tools'
+import { ifProp, switchProp } from 'styled-tools'
 import styled from '@emotion/styled'
 import { Link } from './Link'
 
-interface NavLinkProps {
+export interface NavLinkProps {
   active?: boolean
+  color?: string
 }
 
 export const NavLink = styled(Link, {
@@ -45,6 +46,11 @@ export const NavLink = styled(Link, {
       },
     },
   },
+  switchProp('color', () => ({
+    white: {
+      color: '#ffffff',
+    },
+  })),
   ifProp('active', ({ theme }: any) => ({
     color: '#367ff3',
   }))

@@ -3,6 +3,7 @@ import svgr from '@svgr/core'
 import glob from 'glob-promise'
 import camelcase from 'camelcase'
 import fs from 'fs-extra-promise'
+import replacements from './replacements.json'
 
 const TARGET_DIR = path.join(__dirname, 'src')
 
@@ -36,6 +37,11 @@ const compile = icons =>
       name: icon.name,
       code: await svgr(
         icon.source,
+        {
+          icon: true,
+          template: svgrTemplate,
+          replaceAttrValues: replacements[icon.name] || {},
+        },
         { icon: true, template: svgrTemplate },
         { componentName: icon.name }
       ),

@@ -1,0 +1,11 @@
+{
+  "LogoIcon": {
+    "#000000": "{props.color || '#000000'}"
+  },
+  "TorinasakuraIcon": {
+    "#1F2937": "{props.color || '#ffffff'}"
+  },
+  "ChevronUpIcon": {
+    "#000": "{props.color || '#ffffff'}"
+  }
+}
