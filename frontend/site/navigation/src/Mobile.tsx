@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Navigation, Drawer, Hamburger } from '@ui/navigation'
-import { Row, Layout, Box } from '@ui/layout'
+import { Row, Column, Layout, Box } from '@ui/layout'
 import { LogoIcon } from '@ui/icons'
-import { Link } from '@ui/link'
+import { Link, NavLink } from '@ui/link'
 
-export const Mobile = ({ offset }) => {
+export const Mobile = ({ offset, items }) => {
   const [showDrawer, setShowDrawer] = useState(false)
 
   return (
@@ -21,7 +21,15 @@ export const Mobile = ({ offset }) => {
           </Layout>
         </Row>
       </Navigation>
-      <Drawer show={showDrawer}>Something for check</Drawer>
+      <Drawer show={showDrawer}>
+        <Column>
+          {items.map(item => (
+            <Layout key={item.id}>
+              <NavLink href={item.url}>{item.label}</NavLink>
+            </Layout>
+          ))}
+        </Column>
+      </Drawer>
     </Box>
   )
 }

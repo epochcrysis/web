@@ -13,35 +13,39 @@ export const NavLink = styled(Link, {
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
-    height: '100%',
-    fontSize: '13px',
+    fontSize: '17px',
     textDecoration: 'none',
-    textTransform: 'uppercase',
-    color: '#000000',
-    fontWeight: 500,
-    opacity: 0.7,
-    '&:after': {
-      position: 'absolute',
-    },
+    color: '#2b2b2b',
+    fontWeight: 400,
+    padding: '0 18px',
+    boxSizing: 'border-box',
     '&:focus': {
-      opacity: 1,
+      color: '#367ff3',
+      outline: 0,
     },
     '&:hover': {
-      opacity: 1,
+      color: '#367ff3',
     },
     '&:active': {
-      opacity: 1,
+      color: '#367ff3',
+    },
+    '&::first-letter': {
+      textTransform: 'uppercase',
+    },
+    '@media (max-width: 40em)': {
+      width: '100%',
+      borderBottom: '1px solid rgba(255, 255, 255, 0.15)',
+      padding: '20px 0',
+      fontSize: '20px',
+      transition: 'all 0.5s ease',
+      '&:hover': {
+        opacity: 0.45,
+        padding: '20px',
+        color: '#2b2b2b',
+      },
     },
   },
   ifProp('active', ({ theme }: any) => ({
-    opacity: 1,
-    '&:after': {
-      content: '" "',
-      right: 0,
-      bottom: 0,
-      left: 0,
-      height: 2,
-      background: '#D22035',
-    },
+    color: '#367ff3',
   }))
 )
