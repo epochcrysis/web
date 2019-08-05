@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/epochcrysis/web/compare/@ui/icons@0.4.2...@ui/icons@0.4.3) (2019-08-05)
+
+**Note:** Version bump only for package @ui/icons
+
+
+
+
+
 ## [0.4.2](https://github.com/epochcrysis/web/compare/@ui/icons@0.4.1...@ui/icons@0.4.2) (2019-08-03)
 
 **Note:** Version bump only for package @ui/icons

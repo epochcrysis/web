@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/epochcrysis/web/compare/@site/navigation@0.4.0...@site/navigation@0.5.0) (2019-08-05)
+
+
+### Features
+
+* **frontend:** some rewrite and addful on navigation ([0294f7e](https://github.com/epochcrysis/web/commit/0294f7e))
+
+
+
+
+
 # [0.4.0](https://github.com/epochcrysis/web/compare/@site/navigation@0.3.0...@site/navigation@0.4.0) (2019-08-03)
 
 
