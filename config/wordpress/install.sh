@@ -52,7 +52,7 @@ wp plugin install --force --activate https://github.com/polylang/polylang/archiv
     https://github.com/wp-graphql/wp-graphql/archive/master.zip \
     https://github.com/wp-graphql/wp-graphql-jwt-authentication/archive/v0.3.1.zip
 
-wp term update category 1 --name="Sample Category"
-wp post update 1 --post_title="Sample Post" --post_name=sample-post
+wp term delete category 1
+wp post delete 1
 
 echo "Great. You can now log into WordPress at: $WORDPRESS_URL/wp-admin"

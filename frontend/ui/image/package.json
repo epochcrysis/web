@@ -1,0 +1,22 @@
+{
+  "name": "@ui/image",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "src/index.ts",
+  "peerDependencies": {
+    "@emotion/styled": "^10.0.7",
+    "react": "^16.8.1"
+  },
+  "devDependencies": {
+    "@emotion/core": "10.0.10",
+    "@emotion/styled": "10.0.11",
+    "@ui/theme": "0.3.0",
+    "jest-emotion": "10.0.11",
+    "react": "16.8.6",
+    "react-test-renderer": "16.8.6"
+  },
+  "dependencies": {
+    "styled-system": "4.2.4"
+  }
+}
