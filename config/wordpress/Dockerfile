@@ -6,7 +6,7 @@ RUN sed -i.bak '/^ *upload_max_filesize/s/=.*/= 64M/' "$PHP_INI_DIR"/php.ini
 
 # install_wordpress.sh & misc. dependencies
 RUN apt-get update; \
-	apt-get install -yq mysql-client netcat sudo less unzip git
+	apt-get install -yq mariadb-client netcat sudo less unzip git
 
 # wp-cli
 RUN curl -sL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o wp; \
