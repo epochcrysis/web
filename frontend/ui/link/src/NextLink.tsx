@@ -4,6 +4,7 @@ import { NavLink } from './NavLink'
 import { Link } from './Link'
 
 interface NextLinkProps {
+  width?: string | number
   color?: string
   href: string
   children: any
@@ -12,6 +13,7 @@ interface NextLinkProps {
 export const NextLink = withRouter(
   ({ router, href, children, ...props }: WithRouterProps & NextLinkProps) => (
     <Link
+      {...props}
       href={href}
       onClick={event => {
         event.preventDefault()

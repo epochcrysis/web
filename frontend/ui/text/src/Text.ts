@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
-import { color, fontSize, fontWeight, lineHeight } from 'styled-system'
+import { color, fontSize, fontWeight, lineHeight, width } from 'styled-system'
 import { ThemeFontSizes, ThemeFontWeights, ThemeLineHeights } from '@ui/theme'
 
 export interface TextProps {
   color?: string
-  fontSize?: keyof ThemeFontSizes
+  width?: string | number
+  fontSize?: string[] | keyof ThemeFontSizes
   fontWeight?: keyof ThemeFontWeights
   lineHeight?: keyof ThemeLineHeights
 }
@@ -15,6 +16,7 @@ export const Text = styled.span<TextProps>(
     fontFamily: theme.fontFamily,
   }),
   color,
+  width,
   fontSize,
   fontWeight,
   lineHeight

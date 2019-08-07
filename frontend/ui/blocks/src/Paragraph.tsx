@@ -13,11 +13,17 @@ const StyledParagraph = styled.div(
     '& p': {
       marginBlockStart: 0,
     },
+    '& em': {
+      color: '#f13054',
+    },
+    '& a': {
+      color: '#367ff3',
+    },
   }),
   ifProp('dropCap', ({ theme }: any) => ({
     '&:not(:focus)::first-letter': {
       float: 'left',
-      fontSize: '8.4em',
+      fontSize: '4.4em',
       lineHeight: '0.68',
       fontWeight: 100,
       margin: '0.05em 0.1em 0 0',

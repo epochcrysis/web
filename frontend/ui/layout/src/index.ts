@@ -20,6 +20,7 @@ const flexBasis = style({
 })
 const flexGrow = style({ prop: 'flexGrow', alias: 'grow' })
 const flexWrap = style({ prop: 'flexWrap', alias: 'wrap' })
+const flexShrink = style({ prop: 'flexShrink' })
 
 const alignItems = style({ prop: 'alignItems', alias: 'align' })
 const justifyContent = style({
@@ -63,6 +64,8 @@ export interface LayoutProps {
   align?: string | string[]
   justify?: string | string[]
   basis?: string | number | string[] | number[]
+  flexBasis?: string | number | string[] | number[]
+  flexShrink?: number | number[]
   grow?: number
   px?: string | number | string[] | number[]
   pt?: string | number | string[] | number[]
@@ -77,6 +80,7 @@ export const Layout = styled.div<LayoutProps>(
   },
   alignItems,
   justifyContent,
+  flexShrink,
   flexBasis,
   flexGrow,
   space

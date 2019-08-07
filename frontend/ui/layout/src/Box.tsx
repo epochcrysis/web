@@ -21,11 +21,14 @@ export interface BoxProps {
   justifyContent?: string | string[]
   backgroundColor?: string
   display?: string | string[]
+  px?: string | number | string[] | number[]
+  py?: string | number | string[] | number[]
 }
 
 export const Box = styled.div<BoxProps>(
   {
     display: 'flex',
+    boxSizing: 'border-box',
   },
   display,
   backgroundColor,
