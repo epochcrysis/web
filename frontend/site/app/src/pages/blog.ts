@@ -1,3 +1,3 @@
-import { IndexPage } from '@site/index-page'
+import { BlogPage } from '@site/blog-page'
 
-export default IndexPage
+export default BlogPage

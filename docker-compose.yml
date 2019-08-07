@@ -51,6 +51,7 @@ services:
       #CURLOPT_SSL_VERIFYPEER: 0
     volumes:
       - wordpress:/var/www/html
+      - ./config/wordpress/theme:/var/www/html/wp-content/themes/default-theme
     depends_on:
       - traefik
       - wordpress-db

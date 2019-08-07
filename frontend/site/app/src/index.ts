@@ -16,6 +16,10 @@ const bootstrap = async () => {
 
   server.use(cookiesMiddleware())
 
+  server.get('/blog/:slug', (req, res) => {
+    app.render(req, res, '/post', { slug: req.params.slug, apiRoute: 'post' })
+  })
+
   server.get('*', (req, res) => handle(req, res))
 
   server.listen(3000)
