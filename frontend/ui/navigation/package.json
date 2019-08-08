@@ -17,7 +17,7 @@
     "react-test-renderer": "16.8.6"
   },
   "dependencies": {
-    "body-scroll-lock": "^2.6.1",
+    "body-scroll-lock": "2.6.4",
     "styled-system": "4.2.4"
   }
 }
