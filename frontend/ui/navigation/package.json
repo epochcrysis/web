@@ -9,10 +9,10 @@
     "react": "^16.8.1"
   },
   "devDependencies": {
-    "@emotion/core": "10.0.10",
-    "@emotion/styled": "10.0.11",
+    "@emotion/core": "10.0.15",
+    "@emotion/styled": "10.0.15",
     "@ui/theme": "0.3.0",
-    "jest-emotion": "10.0.11",
+    "jest-emotion": "10.0.14",
     "react": "16.8.6",
     "react-test-renderer": "16.8.6"
   },
