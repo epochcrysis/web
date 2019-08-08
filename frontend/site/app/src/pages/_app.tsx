@@ -1,7 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import { withProviders } from '../providers'
-import { Seo } from '@common/Wordpress'
+import { Seo } from '@common/wordpress'
 
 class SiteApp extends App {
   render() {
