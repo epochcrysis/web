@@ -15,6 +15,6 @@
     "fs-extra-promise": "1.0.1",
     "glob-promise": "3.4.0",
     "react": "16.8.6",
-    "ts-node": "8.2.0"
+    "ts-node": "8.3.0"
   }
 }
