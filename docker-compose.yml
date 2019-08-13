@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   traefik:
-    image: torinasakura/traefik:epochcrysis
+    image: torinasakura/traefik:ec
     command: --api --docker
     ports:
       - 80:80
