@@ -34,7 +34,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-intl": "2.9.0",
-    "react-router-dom": "5.0.0",
+    "react-router-dom": "5.0.1",
     "recompose": "^0.30.0",
     "styled-system": "^4.1.0",
     "styled-tools": "^1.7.1",
