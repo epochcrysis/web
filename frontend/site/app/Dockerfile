@@ -1,4 +1,4 @@
-FROM node:11-alpine as builder
+FROM node:alpine as builder
 
 RUN mkdir /app
 
@@ -7,7 +7,7 @@ ADD . /app
 RUN cd /app && yarn install
 RUN cd /app/frontend/site/app && yarn run build
 
-FROM node:11-alpine
+FROM node:alpine
 
 COPY --from=builder /app/frontend/site/app/locales /app/locales
 COPY --from=builder /app/frontend/site/app/dist /app/dist
