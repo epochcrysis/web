@@ -6,7 +6,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "hoist-non-react-statics": "3.3.0",
-    "humanize-duration": "3.18.0",
+    "humanize-duration": "3.21.0",
     "humanize-duration-ts": "2.0.0",
     "normalize-path": "3.0.0",
     "react": "16.8.6",
