@@ -11,6 +11,6 @@
     "react": "16.8.6"
   },
   "dependencies": {
-    "emotion-theming": "10.0.14"
+    "emotion-theming": "10.0.19"
   }
 }
