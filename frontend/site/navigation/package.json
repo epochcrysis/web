@@ -7,7 +7,7 @@
   "dependencies": {
     "@ui-parts/use-window-size": "0.1.0",
     "react": "16.8.6",
-    "react-intl": "2.9.0"
+    "react-intl": "3.6.1"
   },
   "devDependencies": {
     "react-test-renderer": "16.8.6"
