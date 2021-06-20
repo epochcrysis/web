@@ -7,6 +7,8 @@
 
 namespace YOOtheme;
 
+global $multipage, $numpages, $page;
+
 list($config, $view) = app(Config::class, View::class);
 
 if (!is_single()) {
@@ -49,12 +51,13 @@ $attrs_button_container['class'][] = "uk-margin-{$config('~theme.post.button_mar
 // Image template
 $image = function ($attr) use ($config, $view) {
 
-    $image = app(ImageProvider::class);
-
-    if (!$src = str_replace(get_site_url() . '/', '', get_the_post_thumbnail_url())) {
+    if (!$src = get_the_post_thumbnail_url()) {
         return;
     }
+
+    $image = app(ImageProvider::class);
     $meta = get_post_meta(get_post_thumbnail_id());
+    $src = Path::relative(Url::base(), set_url_scheme($src, 'relative'));
     $alt = isset($meta['_wp_attachment_image_alt']) ? $meta['_wp_attachment_image_alt'] : '';
 
     if ($view->isImage($src) == 'svg') {
@@ -147,11 +150,21 @@ $image = function ($attr) use ($config, $view) {
 
         <?php if ($content && (is_single() || $config('~theme.blog.content'))) : ?>
             <div<?= $view->attrs($attrs_content) ?> property="text">
+
+                <?php if (is_single() && $multipage) : ?>
+                    <p class="uk-text-meta tm-page-break <?= ($page == '1') ? 'tm-page-break-first-page' : '' ?>"><?= sprintf(__('Page %s of %s', 'yootheme'), $page, $numpages) ?></p>
+                <?php endif ?>
+
                 <?php if (is_numeric($config('~theme.post.content_length')) && $config('~theme.post.content_length') >= 0) : ?>
                     <?= Str::limit(strip_tags($content), $config('~theme.post.content_length'), '...', false) ?>
                 <?php else : ?>
                     <?= $content ?>
                 <?php endif ?>
+
+                <?php if (is_single()) {
+                    echo link_pages();
+                } ?>
+
             </div>
         <?php endif ?>
 
@@ -170,10 +183,6 @@ $image = function ($attr) use ($config, $view) {
             <a<?= get_attrs($attrs_button) ?> href="<?= get_permalink() ?>"><?= $extended['more_text'] ?: __('Continue reading', 'yootheme') ?></a>
         </p>
         <?php endif ?>
-
-        <?php if (is_single()) {
-        wp_link_pages(['before' => '<div class="uk-margin-medium">' . __('Pages:') . '<ul class="uk-pagination">', 'after' => '</ul></div>']);
-        } ?>
 
         <?php if ($edit = get_edit_post_link()) : ?>
         <p>

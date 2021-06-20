@@ -72,6 +72,11 @@ foreach ($items as $index => $item) {
 
     $visibility = $config("~theme.modules.{$item->id}.visibility");
     $visible = min(array_search($visibility, $visibilities), $visible);
+    $widget = $view('~theme/templates/module', ['index' => $index, 'module' => $item, 'position' => $name]);
+
+    if (empty($widget)) {
+        continue;
+    }
 
     $widgets[] = $this->el(
         'div',
@@ -81,7 +86,7 @@ foreach ($items as $index => $item) {
                 'uk-visible@{0}' => $visibility,
             ],
         ],
-        $view('~theme/templates/module', ['index' => $index, 'module' => $item, 'position' => $name])
+        $widget
     );
 }
 

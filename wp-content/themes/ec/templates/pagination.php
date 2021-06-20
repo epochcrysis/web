@@ -13,7 +13,8 @@ global $wp_query;
 
 $args = [
     'type' => 'array',
-    'mid_size' => 1,
+    'mid_size' => 3,
+    'end_size' => 1,
     'next_text' => __('<span uk-pagination-next></span>', 'yootheme'),
     'prev_text' => __('<span uk-pagination-previous></span>', 'yootheme'),
 ];

@@ -9,7 +9,7 @@ $view = app(View::class);
 
 $date = $config('~theme.post.date') ? '<span>' . get_post_date($post) . '</span>' : '';
 $author = $config('~theme.post.author') ? get_post_author($post) : '';
-$category = $config('~theme.post.categories') ? get_the_category_list(__(', '), '', $post) : '';
+$category = $config('~theme.post.categories') ? get_the_category_list(__(', ', 'yootheme'), '', $post) : '';
 $comments = $config('~theme.post.comments') && !post_password_required($post) && (comments_open($post) || get_comments_number($post));
 
 if ($date || $author || $category || $comments) {
@@ -29,7 +29,7 @@ if ($date || $author || $category || $comments) {
                     <li><?= $part ?></li>
                 <?php endforeach ?>
 
-                <?php if ($category && count(wp_get_post_categories($post)) > 1) : ?>
+                <?php if ($category && count(wp_get_post_categories($post->ID)) > 1) : ?>
                     <li><span><?= $category ?></span></li>
                 <?php elseif($category) : ?>
                     <li><?= $category ?></li>
@@ -62,7 +62,7 @@ if ($date || $author || $category || $comments) {
                 ?>
                 <?php
 
-                if ($category && $categories = get_the_category_list(__(', '), '', $post->ID)) {
+                if ($category && $categories = get_the_category_list(__(', ', 'yootheme'), '', $post->ID)) {
                     printf(__('Posted in %1$s.', 'yootheme'), $categories);
                 }
 
@@ -70,7 +70,7 @@ if ($date || $author || $category || $comments) {
                 <?php
 
                 if ($comments) {
-                    comments_popup_link(__('Leave a Comment'), __('1 Comment', 'yootheme'), __('% Comments', 'yootheme'));
+                    comments_popup_link(__('Leave a Comment', 'yootheme'), __('1 Comment', 'yootheme'), __('% Comments', 'yootheme'));
                 }
 
                 ?>

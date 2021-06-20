@@ -4,12 +4,6 @@
 $config->addAlias('~header', '~theme.header');
 $config->addAlias('~navbar', '~theme.navbar');
 
-if ($config('~theme.search_module') == 'mod_finder') {
-    JHtml::_('jquery.framework');
-    JHtml::_('formbehavior.chosen');
-    JHtml::_('bootstrap.tooltip');
-}
-
 $style = '';
 $search = &$fields[0];
 $toggle = [];
@@ -18,7 +12,7 @@ $layout = $config('~header.layout');
 $attrs['class'] = array_merge(['uk-search'], isset($attrs['class']) ? (array) $attrs['class'] : []);
 
 // Style
-if (in_array($position, ['navbar', 'header']) && preg_match('/^(horizontal|stacked)/', $layout)) {
+if (in_array($position, ['navbar', 'header', 'header-split']) && preg_match('/^(horizontal|stacked)/', $layout)) {
     $style = $config('~header.search_style');
 }
 
@@ -43,7 +37,7 @@ if (in_array($style, ['dropdown', 'justify'])) {
 }
 
 // Toggle
-if ($style == 'modal' && $position == 'header') {
+if ($style == 'modal' && in_array($position, ['header', 'header-split'])) {
     $toggle['class'][] = 'uk-search-toggle';
 }
 
