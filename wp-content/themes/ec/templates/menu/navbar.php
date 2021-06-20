@@ -1,5 +1,7 @@
 <?php
 
+use YOOtheme\Arr;
+
 // Config
 $config->addAlias('~navbar', '~theme.navbar');
 
@@ -20,13 +22,15 @@ foreach (array_values($items) as $i => $item) {
 
     // Icon
     $icon = $config('~menuitem.icon');
-    $icon_attrs['class'][] = $item->menu_image_css;
-    if (preg_match('/\.(gif|png|jpg|svg)$/i', $icon)) {
-        $icon_attrs['class'][] = 'uk-margin-small-right';
-        $icon = "<img {$this->attrs($icon_attrs)} src=\"{$icon}\" alt=\"{$item->title}\">";
+    $icon_attrs['class'] = [
+        $item->menu_image_css,
+        'uk-margin-small-right' => !$config('~menuitem.icon-only'),
+    ];
+
+    if ($view->isImage($icon)) {
+        $icon = $view->image($icon, $icon_attrs + ['alt' => $item->title, 'uk-svg' => $view->isImage($icon) == 'svg']);
     } elseif ($icon) {
-        $icon_attrs['class'][] = 'uk-margin-small-right';
-        $icon = "<span {$this->attrs($icon_attrs)} uk-icon=\"icon: {$icon}\"></span>";
+        $icon = "<span {$this->attrs($icon_attrs)} uk-icon=\"{$icon}\"></span>";
     }
 
     // Show Icon only
@@ -35,7 +39,7 @@ foreach (array_values($items) as $i => $item) {
     }
 
     // Header
-    if ($item->type === 'header' || ($item->type === 'custom' && $item->url === '#')) {
+    if ($isHeader = $item->type === 'header' || ($item->type === 'custom' && $item->url === '#')) {
 
         if (!$children && $level == 1) {
             continue;
@@ -47,7 +51,7 @@ foreach (array_values($items) as $i => $item) {
             $title = '';
             $attrs['class'][] = 'uk-nav-divider';
         } elseif ($children) {
-            $title = "<a class=\"{$item->class}\" href>{$title}</a>";
+            $title = "<a class=\"{$item->class}\">{$title}</a>";
         } else {
             $attrs['class'][] = 'uk-nav-header';
         }
@@ -93,14 +97,11 @@ foreach (array_values($items) as $i => $item) {
 
         if ($level == 1) {
 
-            $parts = array_chunk($item->children, ceil(count($item->children) / $config('~menuitem.columns', 1)));
-            $count = count($parts);
-
             $children['class'][] = 'uk-navbar-dropdown';
 
-            $click = ($item->type === 'header' || $item->type === 'custom' && $item->url === '#') && $mode = $config('~navbar.dropdown_click');
+            $mode = $isHeader ? ($config('~navbar.dropdown_click') ? 'click' : 'hover') : false;
 
-            if ($justify = $config('~menuitem.justify') or $click) {
+            if ($justify = $config('~menuitem.justify') or $mode) {
 
                 $boundary = $justify || $config('~navbar.dropbar') && $config('~navbar.dropdown_boundary');
 
@@ -110,25 +111,31 @@ foreach (array_values($items) as $i => $item) {
                     'pos' => $justify ? 'bottom-justify' : "bottom-{$config('~navbar.dropdown_align')}",
                     'boundary' => $boundary ? '!.uk-navbar-container' : false,
                     'boundaryAlign' => $boundary,
-                    'mode' => $click ? 'click' : 'click,hover',
+                    'mode' => $mode,
                 ]));
             }
 
-            $columns = '';
+            $columns = Arr::columns($item->children, $config('~menuitem.columns', 1));
+            $columnsCount = count($columns);
 
-            foreach ($parts as $part) {
-                $columns .= "<div><ul class=\"uk-nav uk-navbar-dropdown-nav\">\n{$this->self(['items' => $part, 'level' => $level + 1])}</ul></div>";
+            $wrapper = [
+                'class' => [
+                    'uk-navbar-dropdown-grid',
+                    "uk-child-width-1-{$columnsCount}"
+                ],
+                'uk-grid' => true
+            ];
+
+            if ($columnsCount > 1 && !$justify) {
+                $children['class'][] = "uk-navbar-dropdown-width-{$columnsCount}";
             }
 
-            $wrapper = ['class' => ['uk-navbar-dropdown-grid'], 'uk-grid' => true];
-
-            if ($count > 1 && !$justify) {
-                $children['class'][] = "uk-navbar-dropdown-width-{$count}";
+            $columnsStr = '';
+            foreach ($columns as $column) {
+                $columnsStr .= "<div><ul class=\"uk-nav uk-navbar-dropdown-nav\">\n{$this->self(['items' => $column, 'level' => $level + 1])}</ul></div>";
             }
 
-            $wrapper['class'][] = "uk-child-width-1-{$count}";
-
-            $children = "{$indention}<div{$this->attrs($children)}><div{$this->attrs($wrapper)}>{$columns}</div></div>";
+            $children = "{$indention}<div{$this->attrs($children)}><div{$this->attrs($wrapper)}>{$columnsStr}</div></div>";
 
         } else {
 

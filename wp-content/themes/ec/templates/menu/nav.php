@@ -17,7 +17,7 @@ foreach ($items as $item) {
 
     // Icon
     $icon = $config('~menuitem.icon');
-    if (preg_match('/\.(gif|png|jpg|svg)$/i', $icon)) {
+    if ($view->isImage($icon)) {
         $icon = "<img src=\"{$icon}\" alt=\"{$item->title}\">";
     } elseif ($icon) {
         $icon = "<span class=\"uk-margin-small-right\" uk-icon=\"icon: {$icon}\"></span>";

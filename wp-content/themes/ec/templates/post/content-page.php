@@ -7,6 +7,8 @@
 
 namespace YOOtheme;
 
+global $multipage, $numpages, $page;
+
 ?>
 
 <article id="post-<?php the_ID() ?>" <?php post_class('uk-article') ?> typeof="Article">
@@ -24,10 +26,18 @@ namespace YOOtheme;
 
     <?php the_title('<h1 class="uk-article-title">', '</h1>') ?>
 
-    <div class="uk-margin-medium" property="text"><?php the_content('') ?></div>
+    <div class="uk-margin-medium" property="text">
+        
+        <?php if ($multipage) : ?>
+            <p class="uk-text-meta tm-page-break <?= ($page == '1') ? 'tm-page-break-first-page' : '' ?>"><?= sprintf(__('Page %s of %s', 'yootheme'), $page, $numpages) ?></p>
+        <?php endif ?>
+    
+        <?php the_content('') ?>
 
-    <?php wp_link_pages(['before' => '<div class="uk-margin-medium">' . __('Pages:') . '<ul class="uk-pagination">', 'after'  => '</ul></div>']) ?>
+        <?= link_pages() ?>
 
+    </div>
+ 
     <?php if ($edit = get_edit_post_link()) : ?>
     <p>
         <a href="<?= esc_url($edit) ?>"><?= sprintf(__('%1$s Edit', 'yootheme'), '<span uk-icon="pencil"></span>') ?></a>

@@ -5,6 +5,7 @@ $config->addAlias('~logo', '~theme.logo');
 $config->addAlias('~mobile', '~theme.mobile');
 
 // Attrs
+$logo = $config('~logo.image_mobile') || $config('~logo.image') || $config('~logo.text') || is_active_sidebar('logo-mobile');
 $attrs_menu = [];
 $attrs_sticky = [];
 $attrs_navbar = ['uk-navbar' => true];
@@ -21,30 +22,7 @@ if ($sticky = $config('~mobile.sticky')) {
     ]);
 }
 
-// Logo
-$logo_el = __($config('~logo.text', 'yootheme'));
-$logo_img = function ($image, $width, $height, array $attrs = []) use ($config) {
-
-    $attrs['alt'] = __($config('~logo.text', 'yootheme'));
-    $attrs['uk-gif'] = $this->isImage($image) === 'gif';
-
-    if ($this->isImage($image) === 'svg') {
-        $logo = $this->image($image, array_merge($attrs, compact('width', 'height')));
-    } else {
-        $logo = $this->image([$image, 'thumbnail' => [$width, $height], 'srcset' => true], $attrs);
-    }
-
-    return $logo;
-};
-
-// Logo Image
-if ($config('~logo.image_mobile')) {
-    $logo_el = $logo_img($config('~logo.image_mobile'), $config('~logo.image_mobile_width'), $config('~logo.image_mobile_height'));
-} elseif ($config('~logo.image')) {
-    $logo_el = $logo_img($config('~logo.image'), $config('~logo.image_width'), $config('~logo.image_height'));
-}
-
-if (!$logo_el) {
+if (!$logo) {
     $config->set('~mobile.logo', false);
 }
 
@@ -84,9 +62,10 @@ if (is_active_sidebar('mobile')) {
             <div class="uk-navbar-left">
 
                 <?php if ($config('~mobile.logo') == 'left') : ?>
-                <a class="uk-navbar-item uk-logo<?= $config('~mobile.logo_padding_remove') ? ' uk-padding-remove-left' : '' ?>" href="<?= $config('~theme.site_url') ?>">
-                    <?= $logo_el ?>
-                </a>
+                    <?= $view('~theme/templates/header-logo', ['class' => 'uk-navbar-item' . ($config('~mobile.logo_padding_remove') ? ' uk-padding-remove-left' : ''), 'mobile' => true]) ?>
+                    <?php if (is_active_sidebar('logo-mobile')) : ?>
+                        <?php dynamic_sidebar("logo-mobile") ?>
+                    <?php endif ?>
                 <?php endif ?>
 
                 <?php if ($config('~mobile.toggle') == 'left') : ?>
@@ -107,9 +86,10 @@ if (is_active_sidebar('mobile')) {
 
             <?php if ($config('~mobile.logo') == 'center') : ?>
             <div class="uk-navbar-center">
-                <a class="uk-navbar-item uk-logo" href="<?= $config('~theme.site_url') ?>">
-                    <?= $logo_el ?>
-                </a>
+                <?= $view('~theme/templates/header-logo', ['class' => 'uk-navbar-item', 'mobile' => true]) ?>
+                <?php if (is_active_sidebar('logo-mobile')) : ?>
+                    <?php dynamic_sidebar("logo-mobile") ?>
+                <?php endif ?>
             </div>
             <?php endif ?>
 
@@ -130,9 +110,10 @@ if (is_active_sidebar('mobile')) {
                 <?php endif ?>
 
                 <?php if ($config('~mobile.logo') == 'right') : ?>
-                <a class="uk-navbar-item uk-logo<?= $config('~mobile.logo_padding_remove') ? ' uk-padding-remove-right' : '' ?>" href="<?= $config('~theme.site_url') ?>">
-                    <?= $logo_el ?>
-                </a>
+                    <?= $view('~theme/templates/header-logo', ['class' => 'uk-navbar-item' . ($config('~mobile.logo_padding_remove') ? ' uk-padding-remove-right' : ''), 'mobile' => true]) ?>
+                    <?php if (is_active_sidebar('logo-mobile')) : ?>
+                        <?php dynamic_sidebar("logo-mobile") ?>
+                    <?php endif ?>
                 <?php endif ?>
 
             </div>

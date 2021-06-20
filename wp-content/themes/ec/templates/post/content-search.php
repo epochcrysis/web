@@ -18,7 +18,7 @@ namespace YOOtheme;
         <?php printf(__('Written by %s on %s.', 'yootheme'), get_post_author(), get_post_date()) ?>
 
         <?php
-            if ($categories = get_the_category_list(__(', '))) {
+            if ($categories = get_the_category_list(__(', ', 'yootheme'))) {
                 printf(__('Posted in %1$s.', 'yootheme'), $categories);
             }
         ?>

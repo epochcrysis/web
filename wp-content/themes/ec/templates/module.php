@@ -77,7 +77,11 @@ if ($position == 'navbar') {
 
     $class[] = 'uk-navbar-item';
 
-} elseif (in_array($position, ['header', 'mobile', 'toolbar-right', 'toolbar-left'])) {
+} elseif (($position == 'logo' && preg_match('/^(offcanvas|modal|horizontal|stacked-center-split)/', $layout)) || $position == 'logo-mobile') {
+
+    $class[] = 'uk-navbar-item';
+
+} elseif (in_array($position, ['header', 'header-split', 'mobile', 'toolbar-right', 'toolbar-left', 'logo'])) {
 
     $class[] = 'uk-panel';
 
@@ -98,10 +102,10 @@ if ($visibility = $config('~module.visibility')) {
 }
 
 // Grid + sidebar positions
-if (!preg_match('/^(toolbar-left|toolbar-right|navbar|header|debug)$/', $position)) {
+if (!preg_match('/^(toolbar-(left|right)|navbar|header(-split)?|logo(-mobile)?|debug)$/', $position)) {
 
     // Title?
-    if ($config('~module.showtitle')) {
+    if ($config('~module.showtitle') && !empty($module->title)) {
 
         $title['class'] = [];
         $title_element = $config('~module.title_tag', 'h3');
@@ -159,6 +163,10 @@ if (preg_match('/^(top|bottom|builder-\d+)$/', $position)) {
 
     }
 
+}
+
+if (empty($title) && empty($module->content)) {
+    return;
 }
 
 ?>
