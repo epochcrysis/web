@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - REGISTRY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/
+      - echo $CODEBUILD_WEBHOOK_TRIGGER
+      - export site_app=${REGISTRY_URI}site
+      - export admin_app=${REGISTRY_URI}admin
+      - export sso_app=${REGISTRY_URI}sso-theme
+      - export account_app=${REGISTRY_URI}account
+      - export mailer_app=${REGISTRY_URI}mail-renderer
+      - export services_mailer=${REGISTRY_URI}mail-service
+      - export public_gateway_app=${REGISTRY_URI}public-gateway
+      - export private_gateway_app=${REGISTRY_URI}private-gateway
+  build:
+    commands:
+      - ./build.sh

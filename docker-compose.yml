@@ -1,0 +1,92 @@
+version: '3.7'
+
+services:
+  traefik:
+    image: monstrs/traefik:monstrs-epochcrysis
+    command: --api --docker
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      default:
+      traefik:
+        ipv4_address: 172.16.233.66
+
+  yarn:
+    image: node:alpine
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+      - modules:/workspace/node_modules
+      - yarncache:/workspace/.yarn-cache
+    environment:
+      - YARN_CACHE_FOLDER=/workspace/.yarn-cache
+    entrypoint: yarn
+
+  db:
+    image: bitnami/mariadb:10.3
+    environment:
+      - MARIADB_USER=wordpress
+      - MARIADB_DATABASE=wordpress
+      - ALLOW_EMPTY_PASSWORD=yes
+
+  wordpress:
+    image: monstrs/wordpress
+    environment:
+      - MARIADB_HOST=db
+      - MARIADB_PORT_NUMBER=3306
+      - WORDPRESS_DATABASE_USER=wordpress
+      - WORDPRESS_DATABASE_NAME=wordpress
+      - WORDPRESS_USERNAME=admin
+      - WORDPRESS_PASSWORD=password
+      - ALLOW_EMPTY_PASSWORD=yes
+      - WORDPRESS_INSTALL_PLUGINS=https://github.com/wp-graphql/wp-graphql/archive/master.zip https://github.com/wp-graphql/wp-graphql-jwt-authentication/archive/v0.3.1.zip wp-multilang
+      - WORDPRESS_ACTIVE_THEME=default-theme
+    volumes:
+      - ./config/wordpress/theme:/bitnami/wordpress/wp-content/themes/default-theme
+    labels:
+      - 'traefik.frontend.rule=Host:wp.local.epochcrysis.monstrs.dev'
+      - 'traefik.protocol=http'
+      - 'traefik.port=80'
+    networks:
+      - default
+      - traefik
+    depends_on:
+      - traefik
+      - db
+
+  site:
+    image: node:alpine
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+      - modules:/workspace/node_modules
+    entrypoint: yarn site:dev
+    environment:
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
+    labels:
+      - 'traefik.frontend.rule=Host:local.epochcrysis.monstrs.dev'
+      - 'traefik.protocol=http'
+      - 'traefik.port=3000'
+    depends_on:
+      - traefik
+      - wordpress
+    networks:
+      - default
+      - traefik
+    extra_hosts:
+      - 'wp.local.epochcrysis.monstrs.dev:172.16.233.66'
+
+volumes:
+  modules:
+  yarncache:
+
+networks:
+  traefik:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.233.0/24

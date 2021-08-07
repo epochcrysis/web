@@ -1,0 +1,15 @@
+{
+  "name": "@site/navigation",
+  "version": "0.0.3",
+  "license": "MIT",
+  "private": true,
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@ui-parts/use-window-size": "0.1.0",
+    "react": "16.8.6",
+    "react-intl": "2.9.0"
+  },
+  "devDependencies": {
+    "react-test-renderer": "16.8.6"
+  }
+}
