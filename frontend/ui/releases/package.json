@@ -1,0 +1,14 @@
+{
+  "name": "@ui/releases",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "@emotion/styled": "^10.0.7",
+    "react": "^16.8.1"
+  },
+  "dependencies": {
+    "styled-system": "4.2.4"
+  }
+}
