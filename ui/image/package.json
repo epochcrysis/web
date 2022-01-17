@@ -1,0 +1,23 @@
+{
+  "name": "@ui/image",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@atls-ui-parts/image": "^0.0.1",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.6.0",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-system": "^5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}

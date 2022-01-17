@@ -1,76 +1,16 @@
 {
   "private": true,
-  "scripts": {
-    "commit": "git-cz",
-    "format": "prettier --write '*.{js,yml,yaml,json,graphql}' '{frontend,backend,scripts}/**/*.{js,ts,tsx,yml,yaml,json,graphql}'",
-    "lint": "tslint --project tsconfig.json -c tslint.json -t codeFrame {frontend,backend,scripts}/**/*.ts{,x}",
-    "typecheck:watch": "tsc --watch --noEmit",
-    "typecheck": "NODE_OPTIONS=--max_old_space_size=4096 tsc --noEmit",
-    "test": "yarn jest",
-    "coverage:ci": "yarn codecov",
-    "compile": "lerna run compile",
-    "site:dev": "yarn workspace @site/app dev",
-    "sso:dev": "yarn workspace @sso/app dev",
-    "account:dev": "yarn workspace @account/app dev",
-    "admin:dev": "yarn workspace @admin/app dev",
-    "mailer:templates:dev": "yarn workspace @mailer/app dev",
-    "mailer:service:dev": "yarn workspace @services/mailer dev",
-    "public-gateway:dev": "yarn workspace @public-gateway/app dev",
-    "private-gateway:dev": "yarn workspace @private-gateway/app dev"
-  },
+  "license": "BSD-3-Clause",
   "devDependencies": {
-    "@commitlint/cli": "8.0.0",
-    "@commitlint/config-conventional": "8.0.0",
-    "@commitlint/config-lerna-scopes": "8.0.0",
-    "@monstrs/commitlint-codebuild-cli": "0.1.17",
-    "@monstrs/github-checks-cli": "1.2.0",
-    "@monstrs/github-checks-formatter-commitlint": "1.1.4",
-    "@monstrs/github-checks-formatter-jest": "1.1.4",
-    "@monstrs/github-checks-formatter-tsc": "1.1.4",
-    "@monstrs/github-checks-formatter-tslint": "1.2.0",
-    "babel-eslint": "10.0.2",
-    "codecov": "3.5.0",
-    "commitizen": "3.1.1",
-    "concurrently": "4.1.0",
-    "cz-conventional-changelog": "2.1.0",
-    "cz-lerna-changelog": "2.0.2",
-    "eslint": "6.0.0",
-    "eslint-config-airbnb": "17.1.0",
-    "eslint-config-prettier": "5.0.0",
-    "eslint-plugin-import": "2.17.3",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-prettier": "3.1.0",
-    "eslint-plugin-react": "7.13.0",
-    "husky": "2.4.1",
-    "jest": "24.8.0",
-    "lerna": "3.15.0",
-    "lint-staged": "8.2.1",
-    "prettier": "1.18.2",
-    "ts-jest": "24.0.2",
-    "tslint": "5.18.0",
-    "tslint-config-prettier": "1.18.0"
+    "@atls/actl-cli": "^0.4.50",
+    "@types/node": "16",
+    "@types/react": "^17.0.19",
+    "husky": "^7.0.1",
+    "typescript": "4.3.5"
   },
   "workspaces": [
-    "frontend/**/*",
-    "backend/**/*",
-    "scripts/*"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn lint && yarn test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "yarn format",
-      "git add"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-lerna-changelog"
-    }
-  }
+    "site/**/*",
+    "ui/**/*",
+    "utils/**/*"
+  ]
 }

@@ -1,0 +1,20 @@
+{
+  "name": "@site/index-page",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@apollo/client": "^3.5.7",
+    "@types/react": "^17.0.37",
+    "@types/styled-system": "^5.1.11"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "react": "^17.0.1"
+  },
+  "dependencies": {
+    "@site/content-fragment": "workspace:0.0.0",
+    "@site/cover-fragment": "workspace:0.0.0",
+    "@ui/layout": "workspace:0.0.0"
+  }
+}

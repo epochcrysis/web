@@ -1,23 +1,28 @@
 {
   "compilerOptions": {
-    "pretty": true,
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "noLib": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": false,
-    "allowJs": true,
-    "jsx": "react",
-    "lib": ["dom", "es6", "esnext"],
-    "resolveJsonModule": true,
     "esModuleInterop": true,
-    "outDir": "./build"
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": false,
+    "isolatedModules": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "pretty": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "sourceMap": false,
+    "target": "es2017",
+    "jsx": "react"
   },
-  "include": ["frontend/**/**/*", "backend/**/**/*", "scripts/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts", "sample/**/*.ts", "e2e"]
+  "include": ["site/**/*", "ui/**/*", "utils/**/*"]
 }
