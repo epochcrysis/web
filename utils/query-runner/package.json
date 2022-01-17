@@ -1,0 +1,17 @@
+{
+  "name": "@utils/query-runner",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@apollo/client": "^3.5.6",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@site/content-fragment",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@apollo/client": "^3.5.7",
+    "@emotion/css": "^11.7.1",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-system": "^5.1.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "^17.0.1",
+    "react-dom": "*"
+  },
+  "dependencies": {
+    "@atls-ui-proto/divider": "^0.0.2",
+    "@ui/accordion": "workspace:0.0.0",
+    "@ui/button": "workspace:0.0.0",
+    "@ui/condition": "workspace:0.0.0",
+    "@ui/icons": "workspace:0.0.0",
+    "@ui/image": "workspace:0.0.0",
+    "@ui/layout": "workspace:0.0.0",
+    "@ui/text": "workspace:0.0.0",
+    "@utils/query-runner": "workspace:0.0.0"
+  }
+}
